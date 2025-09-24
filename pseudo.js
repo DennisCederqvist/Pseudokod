@@ -6,29 +6,25 @@
 0, in other cases */
 
 
-Goal: calculate the finalgrade based on certain criterias
+START
+    PROMPT "Enter your exam grade" grade
+    PROMPT "Enter number of projects you completed" projectsCompleted
 
 
-Inputs:
-Start
-    input exampoints and sava as exam
-    input number of project save as projects
+    STARTFUNCTION finalGrade(grade, projectsCompleted)
 
-    if exam > 90 or "||" if projects > than 10
-    return 100
+        IF grade > 90 OR projectsCompleted > 10
+            finalGrade = 100
+        ELSE IF grade > 75 AND projectsCompleted > 4
+            finalGrade = 90
+        ELSE IF grade > 50 AND projectsCompleted > 1
+            finalGrade = 75
+        ELSE
+            finalGrade = 0
+        ENDIF
 
-    if exam > 70 and "&&" projects >=5
-    return 90 points
+        return finalGrade
+    ENDFUNCTION
 
-    if exam > 50 and "&&" projects >= 2
-    return 75
-
-    else
-    return 0
-End
-
-Returns:
-between 0 and 100 points depending on the results.
-
-Step by step:
-
+    PRINT "your final grade is " finalGrade(a, b)
+END

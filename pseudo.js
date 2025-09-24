@@ -26,5 +26,5 @@ START
         return finalGrade
     ENDFUNCTION
 
-    PRINT "your final grade is " finalGrade(a, b)
+    PRINT "your final grade is " finalGrade(grade, projectsCompleted)
 END
